@@ -31,7 +31,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== HOME SWIPER ===============*/
 
-let homeSwiper = new Swiper(".home-swiper", {
+const homeSwiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
     loop: 'true',
 
@@ -42,9 +42,21 @@ let homeSwiper = new Swiper(".home-swiper", {
 });
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-
+function scrollHeader(){
+    const header = document.getElementById('header')
+    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
 
 /*=============== NEW SWIPER ===============*/
+const newSwiper = new Swiper(".new-swiper", {
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    loop: 'true',
+});
+
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/

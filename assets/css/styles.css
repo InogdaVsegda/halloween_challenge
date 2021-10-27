@@ -226,7 +226,9 @@ button{
 
 
 /* Change background header */
-
+.scroll-header{
+  background: var(--container-color);
+}
 
 /* Active link */
 
@@ -366,22 +368,235 @@ button{
 }
 
 /*=============== CATEGORY ===============*/
+.category_container{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+}
 
+.category_data{
+  text-align: center;
+}
+
+.category_img{
+  width: 120px;
+  margin-bottom: var(--mb-0-75);
+  transition: .3s;
+}
+
+.category_title{
+  margin-bottom: var(--mb-0-25);
+}
+
+.category_data:hover .category_img{
+  transform: translateY(-.5rem);
+}
 
 /*=============== ABOUT ===============*/
+.about_container{
+  row-gap: 2rem;
+}
 
+.about_data{
+  text-align: center;
+}
+
+.about_description{
+  margin-bottom: var(--mb-2);
+}
+
+.about_img{
+  width: 200px;
+  justify-self: center;
+}
 
 /*=============== TRICK OR TREAT ===============*/
+.trick_container{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
 
+.trick_content{
+  position: relative;
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 1.5rem 0 1rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.trick_img{
+  width: 90px;
+  transition: .3s;
+}
+
+.trick_subtitle,
+.trick_price{
+  display: block;
+}
+
+.trick_subtitle{
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.trick_title,
+.trick_price{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+}
+
+.trick_button{
+  display: inline-flex;
+  padding: .5rem;
+  border-radius: .25rem .25rem .75rem .25rem;
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+}
+
+.trick_icon{
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.trick_content:hover .trick_img{
+  transform: translateY(-.5rem);
+}
+
+.trick_content:hover .trick_button{
+  right: 0;
+}
 
 /*=============== DISCOUNT ===============*/
+.discount_container{
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 2.5rem 0 1.5rem;
+  row-gap: .75rem;
+}
 
+.discount_data{
+  text-align: center;
+}
+
+.discount_title{
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+}
+
+.discount_img{
+  width: 200px;
+  justify-self: center;
+}
 
 /*=============== NEW ARRIVALS ===============*/
+.new_container{
+  padding-top: 1rem;
+}
 
+.new_img{
+  width: 120px;
+  margin-bottom: var(--mb-0-5);
+  transition: .3s;
+}
+
+.new_content{
+  position: relative;
+  background: var(--container-color);
+  width: 242px;
+  padding: 2rem 0 1.5rem 0;
+  border-radius: .75rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.new_tag{
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+}
+
+.new_title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.new_subtitle{
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.new_prices{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.new_price{
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.new_discount{
+  color: var(--first-color);
+  font-size: var(--smaller-font-size);
+  text-decoration: line-through;
+  font-weight: var(--font-medium);
+}
+
+.new_button{
+  display: inline-flex;
+  padding: .5rem;
+  border-radius: .25rem .25rem .75rem .25rem;
+  position: absolute;
+  bottom: 0;
+  right: -3rem;
+}
+
+.new_icon{
+  font-size: 1.25rem;
+}
+
+.new_content:hover .new_img{
+  transform: translateY(-.5rem);
+}
+
+.new_content:hover .new_button{
+  right: 0;
+}
 
 /*=============== NEWSLETTER ===============*/
+.newsletter_description{
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
 
+.newsletter_form{
+  background: var(--container-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: .75rem;
+}
+
+.newsletter_input{
+  width: 70%;
+  padding: 0 .5rem;
+  background: none;
+  color: var(--title-color);
+}
+
+.newsletter_input::placeholder{
+  color: var(--text-color);
+}
 
 /*=============== FOOTER ===============*/
 
