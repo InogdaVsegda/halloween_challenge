@@ -86,3 +86,15 @@ function scrollUp(){
 window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true
+})
+
+sr.reveal('.home-swiper, .new-swiper, .newsletter_container')
+sr.reveal('.category_data, trick_content, .footer_content', {interval: 100})
+sr.reveal('.about_data, .discount_img', {origin: 'left'})
+sr.reveal('.about_img, .discount_data', {origin: 'right'})
